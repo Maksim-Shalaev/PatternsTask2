@@ -40,7 +40,7 @@ class AuthTest {
         $("[data-test-id = login] input").setValue(notRegisteredUser.getLogin());
         $("[data-test-id = password] input").setValue(notRegisteredUser.getPassword());
         $("[data-test-id = action-login]").click();
-        $("[data-test-id = error-notification].notification_visible").shouldHave(Condition.text("Ошибка! Неверно указан логин или пароль"))
+        $("[data-test-id = error-notification].notification_visible").shouldHave(Condition.text("Ошибка. Неверно указан логин или пароль"))
                 .shouldBe(Condition.visible, Duration.ofSeconds(15));
     }
 
